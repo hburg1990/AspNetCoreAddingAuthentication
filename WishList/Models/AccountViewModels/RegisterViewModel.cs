@@ -10,12 +10,12 @@ namespace WishList.Models.AccountViewModels
         public String Email { get; set; }
 
         [Required]
-        [StringLength(100), MinLength(8)]
-        [DataType("Password")]
+        [StringLength(100, MinimumLength = 8)]
+        [DataType(DataType.Password)]
         public String Password { get; set; }
 
         [Required]
-        [DataType("Password")]
+        [DataType(DataType.Password)]
         [Compare("Password")]
         public String ConfirmPassword { get; set; }
     }
